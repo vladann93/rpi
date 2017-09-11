@@ -81,6 +81,8 @@ def take_action(i,Pi_buddy):       # This function desides what action has to be
 
 def main():
 
+if __name__ == '__main__':main()
+    
     Pi_buddy = Twitter(auth=OAuth(A_token,A_secrt,Cns_key,Cns_sec))
     Pi_Buddy_rec = twitter.OAuth(consumer_key=Cns_key,
                                  consumer_secret=Cns_sec,
@@ -96,5 +98,5 @@ def main():
                 for i in slice_rsponc(new_msg):
                     take_action(i, Pi_buddy)
                 
-if __name__ == '__main__':main()
+
     
