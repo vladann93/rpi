@@ -80,15 +80,6 @@ def take_action(i,Pi_buddy):       # This function desides what action has to be
     Pi_buddy.direct_messages.new(user=me,text='Now your '+seg1+' is '+seg0+' :)')
 
 def main():
-    GPIO.cleanup()
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(_LIGHT,GPIO.OUT)
-    GPIO.setup(_FAN,GPIO.OUT) 
-    GPIO.setup(_AC,GPIO.OUT)
-    
-    GPIO.output(_FAN,False)
-    GPIO.output(_LIGHT,False)
-    GPIO.output(_AC,False)
 
     Pi_buddy = Twitter(auth=OAuth(A_token,A_secrt,Cns_key,Cns_sec))
     Pi_Buddy_rec = twitter.OAuth(consumer_key=Cns_key,
