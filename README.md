@@ -1,4 +1,0 @@
-# rpi
-
-
-citaj ovo
