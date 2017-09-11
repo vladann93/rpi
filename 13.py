@@ -96,7 +96,6 @@ def main():
                                  token=A_token,token_secret=A_secrt)
     
     stream = twitter.stream.TwitterStream(auth=Pi_Buddy_rec, domain='userstream.twitter.com')
-    temp = get_temp()
     sen_msg="Hey,\nHow Can I help you?"
     Pi_buddy.direct_messages.new(user=me,text=sen_msg)
     for msg in stream.user():
